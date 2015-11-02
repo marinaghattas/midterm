@@ -2,7 +2,7 @@ function setup() {
 createCanvas(windowWidth, windowHeight);
     var x = 40;
     var y = 40;
-    var gridWidth = 900;
+   var gridWidth = 900;
     for(var i=0; i<100; i++){
         // console.log(i);
         drawPattern(x,y);
@@ -23,23 +23,31 @@ createCanvas(windowWidth, windowHeight);
     function draw(){
 }
 
-    function drawPattern(){
+    function drawPattern(startX,startY){
         //1st large
-        triangle(0,0,50,100,100,0);
+        fill('BurlyWood')
+        triangle(startX,startY,startX+50,startY+100,startX+100,startY);
         //1st small
-        triangle(20,20,50,80,80,20);
+        fill('green')
+        triangle(startX+20,startY+20,startX+50,startY+80,startX+80,startY+20);
         //2nd large
-        triangle(50,100,100,0,150,100);
+        fill('AntiqueWhite')
+        triangle(startX+50,startY+100,startX+100,startY,startX+150,startY+100);
         //2nd small
-        triangle(70,80,100,20,130,80);
+        fill('red')
+        triangle(startX+70,startY+80,startX+100,startY+20,startX+130,startY+80);
         //3rd large
-        triangle(50,100,100,200,150,100);
+        fill('BurlyWood')
+        triangle(startX+50,startY+100,startX+100,startY+200,startX+150,startY+100);
         //3rd small
-        triangle(70,120,100,180,130,120);
+        fill('green')
+        triangle(startX+70,startY+120,startX+100,startY+180,startX+130,startY+120);
         //4th large
-        triangle(0,200,50,100,100,200);
+        fill('AntiqueWhite')
+        triangle(startX,startY+200,startY+50,startX+100,startY+100,startY+200);
         //4th small
-        triangle(20,180,50,120,80,180);
+        fill('red')
+        triangle(startX+20,startY+180,startX+50,startY+120,startX+80,startY+180);
 
     }
 
