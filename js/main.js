@@ -50,4 +50,3 @@ triangle(startX+50,startY+100,startX+100,startY,startX+150,startY+100);
         triangle(startX+20,startY+200,startX+50,startY+140,startX+80,startY+200);
 
     }
-
