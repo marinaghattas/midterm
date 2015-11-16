@@ -17,18 +17,21 @@ createCanvas(windowWidth, windowHeight);
     function drawPattern(startX,startY){
 
         var x = -50;
-    var y = 0;
-   var winWidth = 1200;
-    for(var i=0; i<100; i++){
+        var y = 0;
+        var winWidth = 1200;
+
+        for(var i=0; i<100; i++){
         // console.log(i);
 //        drawPattern(x,y);
+
+            //first two large triangle
         var red = new RedTriangle(x,y);
         red.drawTriangle();
         myArray.push(red);
         var green =new GreenTriangle(x,y);
         green.drawTriangle();
         myArray.push( green);
-
+            //second two large triangle
         red = new RedTriangle(x-50,y+100);
         red.drawTriangle();
         myArray.push(red);
@@ -47,12 +50,6 @@ createCanvas(windowWidth, windowHeight);
 
     }
     }
-      //  ==============================>>
-
-
-
-
-        //  ==============================>>
 
 
 
@@ -114,7 +111,7 @@ function GreenTriangle(startX,startY){
         triangle(startX+20,startY,startX+50,startY+60,startX+80,startY);
 
         //draw hit area to visulze
-//        ellipse(this.cX,this.cY,50,50);
+      //  ellipse(this.cX,this.cY,60,60);
     }
 
     this.changeColor = function(){
@@ -133,7 +130,7 @@ function RedTriangle(startX,startY){
     this.r= 50;
     this.fillOuter = 'AntiqueWhite' ;
     this.fillInner = 'red';
-    this.changeInner = 'yellow';
+    this.changeInner = 'pink';
     //method: draw the triangle
     this.drawTriangle = function(){
 
@@ -144,7 +141,7 @@ function RedTriangle(startX,startY){
         fill(this.fillInner)
         triangle(startX+70,startY+100,startX+100,startY+40,startX+130,startY+100);
          //draw hit area to visulze
-      //  ellipse(this.cX,this.cY,50,50);
+      //  ellipse(this.cX,this.cY,60,60);
 
     }
 
